@@ -4,11 +4,12 @@ import java.util.Arrays;
 
 //242. 有效的字母异位词
 //https://leetcode.cn/problems/valid-anagram/
+//数组作为哈希表
 public class IsAnagram {
 //在key的范围可控的情况下，用数组作为哈希表
 
 
-    //可以使用Arrays.equals方法比较两个数组是否相等
+    //可以使用Arrays.equals方法比较两个数组是否相等,并且字符数组效率高
     public boolean isAnagramSort(String s, String t) {
         //先比较长度不相等，直接返回false
         if (s.length() != t.length()) return false;

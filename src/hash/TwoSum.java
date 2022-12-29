@@ -5,6 +5,7 @@ import java.util.Map;
 
 //1. 两数之和
 // https://leetcode.cn/problems/two-sum/
+//map作为哈希表
 public class TwoSum {
 
 
