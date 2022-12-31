@@ -1,4 +1,4 @@
-
+package solution;
 
 //855. 考场就座
 //https://leetcode.cn/problems/exam-room/
@@ -11,6 +11,7 @@ import java.util.TreeSet;
 public class ExamRoom {
     public static void main(String[] args) {
 
+        //从大到小排序
         TreeSet<Integer> set = new TreeSet<>((next, curr) -> curr - next);
         set.add(1);
         set.add(3);
@@ -18,6 +19,19 @@ public class ExamRoom {
         set.add(2);
         set.add(4);
         System.out.println(set);
+
+        //从大到小(优先级)出队,直接打印和出队顺序不同，堆使用大根堆
+        PriorityQueue<Integer> pq = new PriorityQueue<>((next, curr) -> curr - next);
+        pq.offer(1);
+        pq.offer(3);
+        pq.offer(5);
+        pq.offer(2);
+        pq.offer(4);
+        pq.offer(6);
+        System.out.println(pq);
+        while (!pq.isEmpty()) {
+            System.out.println(pq.poll());
+        }
     }
 
     int n;
@@ -75,8 +89,8 @@ public class ExamRoom {
 }
 
 /**
- * Your ExamRoom object will be instantiated and called as such:
- * ExamRoom obj = new ExamRoom(n);
+ * Your solution.ExamRoom object will be instantiated and called as such:
+ * solution.ExamRoom obj = new solution.ExamRoom(n);
  * int param_1 = obj.seat();
  * obj.leave(p);
  */
