@@ -1,4 +1,4 @@
-package solution;
+package priorityQueue;
 
 //855. 考场就座
 //https://leetcode.cn/problems/exam-room/
@@ -89,8 +89,8 @@ public class ExamRoom {
 }
 
 /**
- * Your solution.ExamRoom object will be instantiated and called as such:
- * solution.ExamRoom obj = new solution.ExamRoom(n);
+ * Your priorityQueue.ExamRoom object will be instantiated and called as such:
+ * priorityQueue.ExamRoom obj = new priorityQueue.ExamRoom(n);
  * int param_1 = obj.seat();
  * obj.leave(p);
  */
