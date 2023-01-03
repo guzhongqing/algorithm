@@ -1,4 +1,4 @@
-package solution;
+package string;
 
 public class Add36Strings {
     public int getInt(char ch) {

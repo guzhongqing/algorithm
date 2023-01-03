@@ -1,4 +1,4 @@
-package solution;
+package array;
 
 public class Rotate {
 
