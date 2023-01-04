@@ -1,8 +1,5 @@
 package sort;
 
-import java.util.Arrays;
-import java.util.Random;
-
 //分治思想
 public class QuickSort {
     //此算法有问题，数组中有相同值，跳不出循环
@@ -22,9 +19,9 @@ public class QuickSort {
     //思路，先判断自己，再移动指针，
     //把与基准相等的元素放到左右递归中，等左右在排序好，自动会排到基准旁边，即基准比自己大也比自己小
     //始终有一个指针指着基准
-    static void select(int[] r, int first, int end) {
-        if (first < end) {
-            int i = first, j = end, key = r[i];
+    static void select(int[] r, int beginIndex, int endIndex) {
+        if (beginIndex < endIndex) {
+            int i = beginIndex, j = endIndex, key = r[i];
             while (i < j) {
                 while (i < j && r[j] >= key) j--;  //这里取等号
                 if (i < j) {
@@ -35,26 +32,9 @@ public class QuickSort {
                     r[i] += r[j] - (r[j] = r[i]);
                 }
             }
-            select(r, first, i - 1);
-            select(r, i + 1, end);
+            select(r, beginIndex, i - 1);
+            select(r, i + 1, endIndex);
         }
     }
-
-    public static void main(String[] args) {
-        int[] array = new int[10];
-        int times = 10000;
-        while (0 != times--) {
-            for (int i = 0; i < array.length; i++) {
-                array[i] = new Random().nextInt(99) + 1;
-            }
-            System.out.println(Arrays.toString(array));
-
-            //数组是传址引用，传入数组，可以改变数组
-            select(array, 0, array.length - 1);
-
-            System.out.println(Arrays.toString(array));
-            System.out.println(times);
-            System.out.println();
-        }
-    }
+    
 }

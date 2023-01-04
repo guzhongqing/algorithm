@@ -1,18 +1,20 @@
-import java.util.ArrayDeque;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.Arrays;
 
 public class Test {
 
 
     public static void main(String[] args) {
-        System.out.println("这是中文");
+        int[] a = new int[]{1, 1, 1};
+        int[] b = a.clone();
+        b[2] = 2;
+        a[0] = 0;
 
+        System.out.println(Arrays.toString(a));
+        System.out.println(Arrays.toString(b));
 
-        Queue<Object> linkedList = new LinkedList<>();
-        Queue<Object> arrayDeque = new ArrayDeque<>();
-        Queue<Object> priorityQueue = new PriorityQueue<>();
+        boolean flag = Arrays.equals(a, b);
+
+        System.out.println(flag);
 
 
     }
