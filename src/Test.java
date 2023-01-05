@@ -1,20 +1,31 @@
-import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Scanner;
 
 public class Test {
 
 
     public static void main(String[] args) {
-        int[] a = new int[]{1, 1, 1};
-        int[] b = a.clone();
-        b[2] = 2;
-        a[0] = 0;
 
-        System.out.println(Arrays.toString(a));
-        System.out.println(Arrays.toString(b));
+        Scanner scanner = new Scanner(System.in);
+        int patternNum = scanner.nextInt();
+        int matchNum = scanner.nextInt();
 
-        boolean flag = Arrays.equals(a, b);
+        HashSet<Integer> set = new HashSet<>();
 
-        System.out.println(flag);
+
+        for (int i = 0; i < patternNum; i++) {
+            int number = scanner.nextInt();
+            set.add(number);
+        }
+
+        for (int i = 0; i < matchNum; i++) {
+            int number = scanner.nextInt();
+            if (set.contains(number)) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
 
 
     }
