@@ -30,6 +30,7 @@ public class ASortTest {
 //                HeapSort.heapSort(b);
 //                QuickSort.select(b, 0, b.length - 1);
 //                QuickSort.quicksort(b, 0, b.length - 1);
+                QuickSort.quick_sort(b, 0, b.length - 1);
 
 
 //                System.out.println(Arrays.toString(b));
