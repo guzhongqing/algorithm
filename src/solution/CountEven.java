@@ -1,5 +1,11 @@
 package solution;
 
+/**
+ * 2180. 统计各位数字之和为偶数的整数个数
+ * https://leetcode.cn/problems/count-integers-with-even-digit-sum/
+ * 简单
+ * 暴力，取位
+ */
 public class CountEven {
 
     public int countEven(int num) {

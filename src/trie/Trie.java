@@ -36,7 +36,7 @@ public class Trie {
 
     //在整个树中插入字符串word
     public void insert(String word) {
-        //指向当前节点对象
+        //指向当前节点对象,或者说指向根节点
         Trie node = this;
         //遍历字符串中每一个字符
         for (int i = 0; i < word.length(); i++) {
