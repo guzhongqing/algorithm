@@ -1,14 +1,13 @@
 
-public class Test {
+public class Test extends Thread {
+
 
     public static void main(String[] args) {
-        long a = 012;
-        System.out.println(a);
 
-        float b = -141;
-        System.out.println(b);
+        String a = "abc";
+        String b = a;
+        System.out.println(b == "abc");
 
-        byte c= (byte) 128;
 
     }
 
