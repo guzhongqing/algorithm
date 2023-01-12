@@ -14,3 +14,12 @@ public class Test extends Thread {
 
 }
 
+
+abstract class Ab {
+    public  static final int a = 10;
+
+    public abstract void way();
+
+
+}
+
