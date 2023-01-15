@@ -1,6 +1,8 @@
 package solution;
 
 
+import java.util.Arrays;
+
 /**
  * 1819. 序列中不同最大公约数的数目
  * https://leetcode.cn/problems/number-of-different-subsequences-gcds/
@@ -17,9 +19,30 @@ public class CountDifferentSubsequenceGCDs {
 
 
     public int countDifferentSubsequenceGCDs(int[] nums) {
+        int maxVal = Arrays.stream(nums).max().getAsInt();
 
-
-        return 1;
+        boolean[] occurred = new boolean[maxVal + 1];
+        for (int num : nums) {
+            occurred[num] = true;
+        }
+        int ans = 0;
+        for (int i = 1; i <= maxVal; i++) {
+            int subGcd = 0;
+            for (int j = i; j <= maxVal; j += i) {
+                if (occurred[j]) {
+                    if (subGcd == 0) {
+                        subGcd = j;
+                    } else {
+                        subGcd = gcd(subGcd, j);
+                    }
+                    if (subGcd == i) {
+                        ans++;
+                        break;
+                    }
+                }
+            }
+        }
+        return ans;
     }
 
 
