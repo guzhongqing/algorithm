@@ -32,40 +32,31 @@ public class Test {
 
 class StaticTest {
 
-    int a = 110;    // 实例变量
-
-    {
-        System.out.println("构造(实例)代码块");
-        System.out.println("a=" + a + ",b=" + b);
-
-    }
-
-    StaticTest() {
-        System.out.println("构造(实例)方法");
-        System.out.println("a=" + a + ",b=" + b);
-    }
-
-
-    public static void main(String[] args) {
-        staticFunction();
-        StaticTest st2 = new StaticTest();
-
-
-    }
-
-    public static void staticFunction() {
-        System.out.println("静态方法");
-    }
+    static StaticTest st1 = new StaticTest();
 
     static int b = 112;     // 静态变量
-
 
     static {
         System.out.println("静态代码块");
     }
 
+    int a = 110;    // 实例变量
 
-    StaticTest st1 = new StaticTest();   //实例对象
+    {
+        System.out.println("构造(实例)代码块");
+        System.out.println("a=" + a + ",b=" + b);
+    }
 
+    StaticTest() {
+        System.out.println("构造(实例)方法");
+    }
 
+    public static void main(String[] args) {
+        staticFunction();
+        StaticTest st2 = new StaticTest();
+    }
+
+    public static void staticFunction() {
+        System.out.println("静态方法");
+    }
 }
