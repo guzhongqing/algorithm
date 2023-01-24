@@ -1,56 +1,17 @@
 
-public abstract class Test {
-
-    public static void main(String[] args) {
-        System.out.println("Test.main");
-
-
-    }
-
-    public abstract void run();
-
-    final void a() {
-
-    }
-
-
-}
-
-class A extends Test {
-    final int a;
-    int b = 2;
-
-    final void a(int a) {
-
-
-    }
-
-    A() {
-        this.a();
-        a = 0;
+public class Test {
+    static boolean foo(char c) {
+        System.out.print(c);
+        return true;
     }
 
     public static void main(String[] args) {
-        new A().run();
-
-
-    }
-
-    @Override
-    public void run() {
-
-    }
-
-    private final class inner {
-        int a = 1;
-
-        void run() {
-            System.out.println(a);
-            System.out.println(b);
+        int i = 0;
+        for (foo('A'); foo('B') && (i < 2); foo('C')) {
+            i++;
+            foo('D');
         }
     }
-
+    //ABDCBDCB
 }
-
-
 
