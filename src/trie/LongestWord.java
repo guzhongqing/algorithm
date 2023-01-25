@@ -33,6 +33,7 @@ public class LongestWord {
     }
 
 
+    //使用hash
     public String hashSet(String[] words) {
         Arrays.sort(words, (a, b) -> {
             if (a.length() != b.length()) {
