@@ -8,6 +8,7 @@ import java.util.List;
  * 151. 反转字符串中的单词
  * https://leetcode.cn/problems/reverse-words-in-a-string/
  * 中等
+ * 使用整体反转+局部反转就可以实现反转单词顺序的目的。
  */
 
 
