@@ -1,33 +1,39 @@
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class Test {
-
-    public Test() {
-        System.out.println("aaaa");
-
-    }
-
     public static void main(String[] args) {
+        sellTicket sellTicket = new sellTicket();
+        new Thread(() -> {
+            for (int i = 0; i < 100; i++) {
+                sellTicket.sell();
+            }
+        }, "售票员1").start();
 
-        byte b = 42;
-        short s = 42;
-        char c = 42;
-        int i = 42;
-        long l = 42L;
-        float f = 42F;
-        double d = 42D;
+        new Thread(() -> {
+            for (int i = 0; i < 100; i++) {
+                sellTicket.sell();
+            }
+        }, "售票员2").start();
 
-        System.out.println(b == s);//true,b转型为int，s转型为int，相等
-        System.out.println(c == d);//true，c转型为double，相等
-        System.out.println(i == l);//true，i转型为long，相等
-
-        b = (byte) (b + b);
-        b += b;//这里将结果int自动强转为byte，相当于加了(byte)
-        c = (char) (s + c);
-        l += f;//这里将结果float自动强转为long，相当于加了(float)
-
-
+        new Thread(() -> {
+            for (int i = 0; i < 100; i++) {
+                sellTicket.sell();
+            }
+        }, "售票员3").start();
     }
-
-
 }
 
+class sellTicket {
+    private int tickets = 100;//同一个对象，线程共享
+    private final Lock reentrantLock = new ReentrantLock();
 
+    public synchronized void sell() {
+        reentrantLock.lock();//手动上锁
+        try {
+            if (tickets > 0) System.out.println(Thread.currentThread().getName() + "售出一张票,剩余" + --tickets + "张票");
+        } finally {
+            reentrantLock.unlock();//手动解锁
+        }
+    }
+}
