@@ -24,8 +24,8 @@ public class GenerateMatrix {
         int curColumn = 0;//定义列索引
 
         //右下为+，左上为-
-        int[] dr = {0, 1, 0, -1};//列方向
-        int[] dc = {1, 0, -1, 0};//方方向
+        int[] dr = {0, 1, 0, -1};//行方向
+        int[] dc = {1, 0, -1, 0};//列方向
         int dIndex = 0;//定义方向索引，0右，1下，2左，3上
 
         while (curNum <= maxNum) {
