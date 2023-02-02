@@ -1,4 +1,4 @@
-package TestFun;
+package test;
 
 public class Expressiontype {
     public static void main(String[] args) {

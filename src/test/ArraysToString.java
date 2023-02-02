@@ -1,4 +1,4 @@
-package TestFun;
+package test;
 
 import EntityClass.Student;
 
