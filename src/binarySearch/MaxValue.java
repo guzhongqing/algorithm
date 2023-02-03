@@ -4,6 +4,7 @@ package binarySearch;
 /**
  * 1802. 有界数组中指定下标处的最大值
  * https://leetcode.cn/problems/maximum-value-at-a-given-index-in-a-bounded-array/
+ * 中等
  * 贪心+二分查找
  */
 public class MaxValue {
