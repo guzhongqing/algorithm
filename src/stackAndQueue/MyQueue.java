@@ -11,10 +11,10 @@ import java.util.Deque;
 public class MyQueue {
 
     public static void main(String[] args) {
-        //ArrayDeque中的push，pop，peek是栈方法
-        //push从队尾进入
-        //pop从队尾弹出
-        //peek获取队尾元素
+        //ArrayDeque中的push，pop，peek
+        //push调用ArrayDeque中的addFirst方法
+        //pop调用ArrayDeque中的removeFirst方法
+        //peek调用ArrayDeque中的peekFirst方法
         ArrayDeque<Object> deque = new ArrayDeque<>();
         deque.push(1);
         deque.push(2);
