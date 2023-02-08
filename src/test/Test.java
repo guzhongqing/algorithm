@@ -1,20 +1,18 @@
 package test;
 
-abstract class Test {
+import java.util.Arrays;
 
-    static boolean aBoolean;
-    static float aFloat;
-    static double aDouble;
+class Test {
 
 
     public static void main(String[] args) {
-
-
-
-
-
+        String[] strings = "/a".split("/");
+        System.out.println(Arrays.toString(strings));//[, a]
+        strings = "/a/".split("/");
+        System.out.println(Arrays.toString(strings));//[, a]
     }
 
 
 }
+
 
