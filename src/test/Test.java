@@ -1,19 +1,14 @@
 package test;
 
 class Test {
+
+    int a=1;//a和1都在堆
+    String S=new String("hello");//S和new String("hello")出来的对象都在堆
+
     public static void main(String[] args) {
-        long totalMemory = Runtime.getRuntime().totalMemory();//初始化堆内存
-        long maxMemory = Runtime.getRuntime().maxMemory();//最大堆内存
-        System.out.println(totalMemory + "B   " + totalMemory / 1024 / 1024 + "MB");
-        System.out.println(maxMemory + "B   " + maxMemory / 1024 / 1024 + "MB");
-        int[] ints = new int[(int) 2e9];
-
-
-        //HotSpot VM 参数:
-        // -Xms1024m -Xmx10240m -XX:+PrintGCDetails
+        int i=1;//i和1在都栈中
+        String name="gzq";//引用在栈，对象在堆中的常量区
     }
-
-
 }
 
 
