@@ -1,16 +1,18 @@
 package test;
 
 
+import java.util.Arrays;
+
 class Test {
     public static void main(String[] args) {
-        StringBuilder stringBuilder = new StringBuilder();
+        int[] a = {1, 2, 3, 4};
+        int[] b = new int[10];
 
-        stringBuilder.toString();
 
-        String s = "hello";
-        char[] chars = new char[10];
-        s.getChars(0, s.length(), chars, 3);
-        System.out.println(chars);
+        System.arraycopy(a, 1, b, 5, 3);
+        System.out.println(Arrays.toString(a));
+
+        System.out.println(Arrays.toString(b));
     }
 
 }
