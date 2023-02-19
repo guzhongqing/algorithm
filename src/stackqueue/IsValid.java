@@ -1,4 +1,4 @@
-package stackAndQueue;
+package stackqueue;
 
 import java.util.LinkedList;
 

@@ -1,4 +1,4 @@
-package slidingWindow;
+package slidingwindow;
 
 import java.util.Arrays;
 
@@ -51,7 +51,7 @@ public class MinSubArrayLen {
         return ans == Integer.MAX_VALUE ? 0 : ans;
     }
 
-    //Arrays.binarySearch()，时间logn
+    //Arrays.binarysearch()，时间logn
     //必须排序，不然会出错，且有不能有多个相同元素
     //如果有目标元素，则返回目标元素下标，
     //如果没有目标元素，则返回目标元素应该出现的索引的负数-1

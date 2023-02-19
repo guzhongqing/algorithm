@@ -1,4 +1,4 @@
-package slidingWindow;
+package slidingwindow;
 
 /**
  * 1234. 替换子串得到平衡字符串

@@ -1,4 +1,4 @@
-package doublePointer;
+package doublepointer;
 
 /**
  * 27. 移除元素

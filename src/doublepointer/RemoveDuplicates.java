@@ -1,4 +1,4 @@
-package doublePointer;
+package doublepointer;
 
 /**
  * 26. 删除有序数组中的重复项

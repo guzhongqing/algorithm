@@ -1,4 +1,4 @@
-package doublePointer;
+package doublepointer;
 
 /**
  * 剑指 Offer 05. 替换空格
