@@ -34,6 +34,21 @@ public class Week334 {
         }
         return answer;
     }
+
+
+    //先求出nums的sum 然后定义一个变量记录左边的和，右边的和就是sum-左边和-当前元素值
+    public int[] leftRigthDifference(int[] nums) {
+        int sum = Arrays.stream(nums).sum();
+        int[] ans = new int[nums.length];
+        int temp = 0;//左边和
+        for (int i = 0; i < nums.length; i++) {
+            ans[i] = Math.abs(sum - temp - nums[i] - temp);
+            temp += nums[i];
+        }
+        return ans;
+    }
+
+
 }
 
 
