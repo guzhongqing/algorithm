@@ -8,7 +8,6 @@ package tree;
  */
 public class EvaluateTree {
     public boolean evaluateTree(TreeNode root) {
-
         //判断当前节点状态
         if (root.left == null) return root.val == 1;
 
