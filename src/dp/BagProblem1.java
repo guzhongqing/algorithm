@@ -52,7 +52,7 @@ public class BagProblem1 {
                      * 当前背包的容量可以放下物品i
                      * 那么此时分两种情况：
                      *    1、不放物品i
-                     *    2、放物品i
+                     *    2、放物品i，要找到上一个状态满足放下i容量放下
                      * 比较这两种情况下，哪种背包中物品的最大价值最大
                      */
                     dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);

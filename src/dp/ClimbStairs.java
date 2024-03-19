@@ -4,7 +4,7 @@ package dp;
 /**
  * 70. 爬楼梯
  * https://leetcode.cn/problems/climbing-stairs/
- * 简答
+ * 简单
  * dp，递归
  */
 public class ClimbStairs {
