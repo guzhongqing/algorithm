@@ -10,6 +10,7 @@ public class IsAnagram {
 
 
     //可以使用Arrays.equals方法比较两个数组是否相等,并且字符数组效率高
+    // 排序法
     public boolean isAnagramSort(String s, String t) {
         //先比较长度不相等，直接返回false
         if (s.length() != t.length()) return false;
@@ -62,9 +63,24 @@ public class IsAnagram {
         for (int i : table) {
             if (i != 0) return false;
         }
-
         return true;
     }
 
+
+    // map比较相等法
+    public boolean mapEquals(String s, String t) {
+        int[] sMap = new int[26];
+        int[] tMap = new int[26];
+
+        for (char c : s.toCharArray()) {
+            sMap[c - 'a']++;
+        }
+
+        for (char c : t.toCharArray()) {
+            tMap[c - 'a']++;
+        }
+        return Arrays.equals(sMap, tMap);
+
+    }
 
 }

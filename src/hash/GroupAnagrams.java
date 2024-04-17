@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
  * 哈希，分组，排序，map中list元素的添加
  */
 public class GroupAnagrams {
+    // 分组要想到map
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String, List<String>> map = new HashMap<>();
         // 给map中的list添加元素：

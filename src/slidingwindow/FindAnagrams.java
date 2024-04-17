@@ -37,11 +37,14 @@ public class FindAnagrams {
         }
 
         // 遍历哈希表,左边指针从最左边开始，只需要移动sLen-pLen次
-        // 左指针向右移动，代表窗口元素减少，对应元素map--，
-        // 左指针向右移动，代表窗口元素增加，对应元素map++，
-        // 注意右指针加入的元素，是窗口的下一个元素
         for (int i = 0; i < sLen - pLen; i++) {
+            // s窗口的左指针向右移动，代表窗口元素减少，对应元素map--，
+            // 注意左指针移除的元素，是窗口的第一个元素
+
             sMap[s.charAt(i) - 'a']--;
+
+            // s窗口的右指针向右移动，代表窗口元素增加，对应元素map++，
+            // 注意右指针加入的元素，是窗口的下一个元素
             sMap[s.charAt(i + pLen) - 'a']++;
             // 判断
             if (Arrays.equals(sMap, pMap)) {
@@ -60,6 +63,4 @@ public class FindAnagrams {
         List<Integer> integerList = new FindAnagrams().findAnagrams(s, p);
         System.out.println(integerList);
     }
-
-
 }
