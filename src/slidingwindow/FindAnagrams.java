@@ -1,9 +1,7 @@
 package slidingwindow;
 
-import java.io.FilterOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedHashSet;
 import java.util.List;
 
 /**
