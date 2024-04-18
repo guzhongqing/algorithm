@@ -21,8 +21,21 @@ public class MaxArea {
 
     // 双指针
     public int maxArea(int[] height) {
-
-        return 1;
+        int left = 0, right = height.length - 1;
+        int ans = 0;
+        while (left < right) {
+            // 计算面积
+            int area = Math.min(height[left], height[right]) * (right - left);
+            // 全局最大面积
+            ans = Math.max(area, ans);
+            // 移动最小长度的指针,长度一样，随意，这里默认移动左指针
+            if (height[left] <= height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
