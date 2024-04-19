@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 239. 滑动窗口最大值
  * https://leetcode.cn/problems/sliding-window-maximum/
  * 困难
- * 剪枝
+ * 剪枝,优先队列(基于堆)，双端队列(单调队列)
  */
 public class MaxSlidingWindow {
 
