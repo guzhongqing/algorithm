@@ -1,10 +1,16 @@
-package solution;
+package array;
 
 import java.util.*;
 
-//https://leetcode-cn.com/problems/merge-intervals/
+/**
+ * 56. 合并区间
+ * https://leetcode.cn/problems/merge-intervals/
+ * 中等
+ * 数组
+ */
 public class Merge {
     public int[][] merge(int[][] intervals) {
+        // 按左边点升序
         Arrays.sort(intervals, Comparator.comparingInt(interval -> interval[0]));
 //        方法一：
 //        Arrays.sort(intervals, (interval1, interval2) -> interval1[0] - interval2[0]);
